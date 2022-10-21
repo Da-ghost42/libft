@@ -1,43 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlcat.c                                          :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboutuil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/13 22:08:12 by mboutuil          #+#    #+#             */
-/*   Updated: 2022/10/13 22:49:08 by mboutuil         ###   ########.fr       */
+/*   Created: 2022/10/21 16:39:02 by mboutuil          #+#    #+#             */
+/*   Updated: 2022/10/21 16:39:14 by mboutuil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-size_t ft_strlcat(char *dst,const char *src, size_t dstsize)
+char *ft_strdup(const char *s)
 {
-	size_t dlen,dsrc,i,j;
-	dlen = ft_strlen(dst);
-	dsrc = ft_strlen(src);
+    char    *q;
+    size_t  n;
 
-	i = dlen;
-	j = 0;
-	while(*(src + j) != '\0')
+    n = 0;
+    q = (char *)malloc(ft_strlen(s) * sizeof(char));
+    if (!q)
+        return NULL;
+    while (s[n])
 	{
-		*(dst + i) = *(src + j);
-		i++;
-		j++;
-		if(i == dstsize - 1)
-			break;
+		q[n] = s[n];
+		n++;
 	}
-	
-	//*(dst + i) != '\0';
-	return (dlen + dsrc);
+	q[n] = '\0';
+    return q;
 }
-int main()
-{
-	char t[] = "hello";
-	char q [] = "world";
-	printf("%lu",ft_strlcat(t,q,5));
-}
-
-
-
