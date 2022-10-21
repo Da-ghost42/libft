@@ -25,18 +25,3 @@ void *ft_memset(void *b,int c,size_t len)
 	}
 	return b;
 }
-// void	memset_main(void)
-// {
-// 	char a[20] = "Hello World!";
-// 	char b[20] = "Hello World!";
-	
-// 	if ((strcmp(memset(a, '5', 6), ft_memset(b, '5', 6))) == 0)
-// 	{
-// 		if ((strcmp(memset(a, 'o', 15), ft_memset(b, 'o', 15))) == 0)
-// 		{
-// 			printf(KGRN "OKAY! =D\n" RESET);
-// 			return;
-// 		}
-// 	}
-// 	printf(KRED "FAILED!\n" RESET);
-// }
