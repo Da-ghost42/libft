@@ -55,11 +55,6 @@ char *ft_strjoin(char const *s1, char const *s2)
 
     return p;
 }
-int main()
-{
-    char *t ="hello";
-    char *s = "";
-    printf("%s",ft_strjoin(t,s)); 
-}
+
 
     
