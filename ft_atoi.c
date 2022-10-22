@@ -43,3 +43,8 @@ int ft_atoi(const char *str)
     }
     return (n * s);
 }
+int main()
+{
+    char t[] = "9";
+    printf("%d",ft_atoi(t));
+}

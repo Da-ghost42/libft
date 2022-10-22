@@ -13,14 +13,6 @@
 
 #include"libft.h"
 
-size_t	 ft_strlen(const char *str)
-{
-	int i;
-	i = 0;
-	while(str[i])
-		i++;
-	return i;
-}
  char *ft_strnstr(const char *haystack, const char *needle, size_t len)
  {
     size_t i;
@@ -43,9 +35,9 @@ size_t	 ft_strlen(const char *str)
     }
     return 0;
  }
- int main()
- {
-    char *p = "oooooolala";
-    char *q = "la";
-    printf("%s",ft_strnstr(p,q,9));
- }
+//  int main()
+//  {
+//     char *p = "oooooolala";
+//     char *q = "la";
+//     printf("%s",ft_strnstr(p,q,9));
+//  }
