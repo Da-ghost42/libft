@@ -42,7 +42,6 @@ char *ft_strjoin(char const *s1, char const *s2)
     char *p;
     int len_s1;
     int len_s2;
-    int i;
 
     len_s1 = ft_strlen(s1);
     len_s2 = ft_strlen(s2);
@@ -55,6 +54,11 @@ char *ft_strjoin(char const *s1, char const *s2)
 
     return p;
 }
-
+// int main()
+// {
+//     char *t ="hello";
+//     char *s = "";
+//     printf("%s",ft_strjoin(t,s)); 
+// }
 
     

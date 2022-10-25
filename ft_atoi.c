@@ -12,12 +12,12 @@
 
 #include"libft.h"
 
-int ft_isdigit(int c )
-{
-	if('0'<= c && '9'>= c)
-		return 1;
-	return 0;
-}
+// int ft_isdigit(int c )
+// {
+// 	if('0'<= c && '9'>= c)
+// 		return 1;
+// 	return 0;
+// }
 int ft_atoi(const char *str)
 {
     int i = 0;
@@ -43,8 +43,8 @@ int ft_atoi(const char *str)
     }
     return (n * s);
 }
-int main()
-{
-    char t[] = "9";
-    printf("%d",ft_atoi(t));
-}
+// int main()
+// {
+//     char t[] = "9";
+//     printf("%d",ft_atoi(t));
+// }

@@ -21,17 +21,18 @@ void *ft_memmove(void *dst, const void *src,size_t len)
 	if(dst < src)
 		return (ft_memcpy(ndst,nsrc,len));
 	if (dst > src)
-		while(--len)
+		while(len--)
 			ndst[len] = nsrc[len];
 return dst ;
 }
 
-	
-// int main(void)
-// {
-// 	char a[8]= "Abdellah";
+/*	
+int main(void)
+{
+	// char a[8]= "Abdellah";
 
-// 	//ft_memmove(a + 3, a + 4, 4);
-// 	ft_memmove(a + 3, a + 4, 4);
-// 	printf("%s\n",a);
-// }
+	//ft_memmove(a + 3, a + 4, 4);
+	
+	printf("%s\n",ft_memmove("", "", 4));
+}
+*/

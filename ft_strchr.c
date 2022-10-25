@@ -14,7 +14,7 @@
 
 char *ft_strchr(const char *s,int c)
 {
-	char p;
+	unsigned char p;
 	p = (unsigned char)c;
 	while(*s)
 	{
@@ -22,11 +22,16 @@ char *ft_strchr(const char *s,int c)
 			return (char *)s;
 		s++;
 	}
-		return NULL;
+	 if (p == '\0')
+        return ((char *) s);
+	return 0;
 }
 // int main ()
-//{
-//	const char t[] = "hello";
-//	printf("%s",ft_strchr(t,'e'));
-	//printf("")
-/**/
+// {
+// 		char *src = "there is so \0ma\0ny \0 \\0 in t\0his stri\0ng !\0\0\0\0";
+// 		printf("%s",ft_strchr(src,'\0'));
+// }
+// //	const char t[] = "hello";
+// //	printf("%s",ft_strchr(t,'e'));
+// 	//printf("")
+// /**/

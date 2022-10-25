@@ -1,36 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboutuil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/21 16:39:02 by mboutuil          #+#    #+#             */
-/*   Updated: 2022/10/21 16:39:14 by mboutuil         ###   ########.fr       */
+/*   Created: 2022/10/24 01:45:40 by mboutuil          #+#    #+#             */
+/*   Updated: 2022/10/24 01:45:54 by mboutuil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-char *ft_strdup(const char *s)
+char *ft_strtrim(const char *s1,const char *set)
 {
-    char    *q;
-    size_t  n;
-
-    n = 0;
-    q = (char *)malloc(ft_strlen(s) * sizeof(char) + 1);
-    if (!q)
-        return NULL;
-    while (s[n])
-	{
-		q[n] = s[n];
-		n++;
-	}
-	q[n] = '\0';
-    return q;
+   int start;
+   int end;
+   
+   start = -1;
+   if (!s1 || !set)
+      return 0;
+   
+   while(s1[++start])
+      if(!ft_strchr(set,s1[start]))
+         break ;
+   end = ft_strlen(s1) + 1;
+   while(--end)
+      if(!ft_strchr(set,s1[end - 1]))
+         break ;
+   return (ft_substr((char *)s1,start,(end - start)));
 }
 // int main()
 // {
-//     char t[] = "simoooo";
-//     printf("%s",ft_strdup(t));
+//    char t[] = "abababattttaaaaa";
+//    printf("%s",ft_strtrim(t,"ab"));
 // }
