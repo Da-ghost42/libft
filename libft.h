@@ -5,6 +5,7 @@
 #include<string.h>
 #include<ctype.h>
 #include<stdlib.h>
+#include<unistd.h>
 
     int ft_isalpha(int c);
     int ft_isdigit(int c );
@@ -35,6 +36,15 @@
     size_t ft_strlcpy(char *dest,const char *src,size_t len);
     void    *ft_memchr(const void *s, int c, size_t n);
     int     ft_memcmp(void const *s1, void const *s2, size_t const n);
+    char		**ft_split(char const *s, char c);
+    void ft_putchar_fd(char c, int fd);
+    void ft_putstr_fd(char *s, int fd);
+    void ft_putendl_fd(char *s, int fd);
+    char *ft_itoa(int c);
+    void	ft_putnbr_fd(int n,int fd);
+    char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
+    void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+
 
 
 #endif
