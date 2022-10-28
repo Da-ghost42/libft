@@ -24,7 +24,7 @@
     while(haystack[i] && i < len)
     {
         j = 0;
-        while(needle[j] && haystack[i + j] == needle[j])
+        while(i + j < len && haystack[i + j] == needle[j])
         {
          
             if(needle[j + 1] == '\0')
