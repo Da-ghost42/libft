@@ -1,28 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlen.c                                           :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mboutuil <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mboutuil <mboutuil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 21:50:49 by mboutuil          #+#    #+#             */
-/*   Updated: 2022/10/13 21:37:56 by mboutuil         ###   ########.fr       */
+/*   Updated: 2022/11/07 13:46:48 by mboutuil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include<stdlib.h>
 
-size_t	 ft_strlen(const char *str)
+#include "libft.h" 
+
+size_t	ft_strlen(const char *str)
 {
-	int i;
-	i = 0;
-	while(str[i])
-		i++;
-	return i;
-}
+	int	i;
 
-// int main()	
-// {
-// 	int i;
-// 	char str[] = "123564878";
-// 	printf("%zu",ft_strlen(str));
-// }
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
+}

@@ -1,25 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isprint.c                                          :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mboutuil <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mboutuil <mboutuil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 21:34:16 by mboutuil          #+#    #+#             */
-/*   Updated: 2022/10/07 21:47:27 by mboutuil         ###   ########.fr       */
+/*   Updated: 2022/11/07 13:08:57 by mboutuil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isprint(int c)
+#include "libft.h"
+
+int	ft_isprint(int c)
 {
-	if(c >= 32 && c <= 126)
-		return 1;
-	return 0;
+	if (c >= 32 && c <= 126)
+		return (1);
+	return (0);
 }
-/*#include<stdio.h>
-int main()
-{
-	unsigned char i;
-	i = 20;
-	printf("%d",ft_isprint(i));
-}*/

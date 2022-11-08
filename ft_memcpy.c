@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   nencpy.c                                           :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mboutuil <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mboutuil <mboutuil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 08:04:33 by mboutuil          #+#    #+#             */
-/*   Updated: 2022/10/15 21:50:03 by mboutuil         ###   ########.fr       */
+/*   Updated: 2022/11/07 13:22:15 by mboutuil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-void *ft_memcpy(void * dst , const void  * src , size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	unsigned char *p;
-	unsigned char *q;
-	size_t i;
+	unsigned char	*p;
+	unsigned char	*q;
+	size_t			i;
+
 	p = (unsigned char *)dst;
 	q = (unsigned char *)src;
-
-	if(p == q)
-		return p;
-	// if (!dst && !src)
-	// 	return (0);
+	if (p == q)
+		return (p);
 		i = 0;
 	while (i < n)
 	{
@@ -32,17 +30,5 @@ void *ft_memcpy(void * dst , const void  * src , size_t n)
 		q++;
 		i++;
 	}
-	return dst ;
+	return (dst);
 }
-
-
-int main()
-{
-	char t[] = "lol";
-	char t2[] = "lol";
-		printf("%s\n",ft_memcpy(t,t2,-1));
-// 		printf("%s\n",memcpy(t,t2,3));
-
-
-}
-

@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mboutuil <mboutuil@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/05 22:19:45 by mboutuil          #+#    #+#             */
+/*   Updated: 2022/11/08 21:47:20 by mboutuil         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include"libft.h"
 
 static int	ft_count_word(char const *s, char c)
 {
-	int i;
-	int word;
+	int	i;
+	int	word;
 
 	i = 0;
 	word = 0;
@@ -37,11 +49,11 @@ static int	ft_size_word(char const *s, char c, int i)
 static void	ft_free(char **strs, int j)
 {
 	while (j-- > 0)
-		free(strs[j]);
-	free(strs);
+		free (strs[j]);
+	free (strs);
 }
 
-char		**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	int		i;
 	int		word;
@@ -52,7 +64,8 @@ char		**ft_split(char const *s, char c)
 	i = 0;
 	j = -1;
 	word = ft_count_word(s, c);
-	if (!(strs = (char **)malloc((word + 1) * sizeof(char *))))
+	strs = (char **)malloc((word + 1) * sizeof(char *));
+	if (!strs)
 		return (NULL);
 	while (++j < word)
 	{
@@ -69,13 +82,3 @@ char		**ft_split(char const *s, char c)
 	strs[j] = 0;
 	return (strs);
 }
-// int main ()
-// {
-// 	int i;
-// 	char t[] = "hello || hhshhs|| ||  |||   olalalalalala|la||";
-// 	while(t[i])
-// 	{
-// 		printf("%p",ft_split(t,'l'));
-// 		i++;
-// 	}
-// }

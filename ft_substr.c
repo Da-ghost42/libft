@@ -1,17 +1,28 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mboutuil <mboutuil@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/07 13:59:39 by mboutuil          #+#    #+#             */
+/*   Updated: 2022/11/07 14:00:40 by mboutuil         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include"libft.h"
 
-char  *ft_substr(char *s, unsigned int start, size_t len)
+char	*ft_substr(char *s, unsigned int start, size_t len)
 {
 	size_t	i;
 	size_t	j;
 	char	*str;
 
 	if (!s)
-		return 0;
-	if(len > ft_strlen(s))
+		return (0);
+	if (len > ft_strlen(s))
 		len = ft_strlen(s);
-	str = (char*)malloc(sizeof(*s) * (len + 1));
+	str = (char *)malloc(sizeof(*s) * (len + 1));
 	if (!str)
 		return (NULL);
 	i = 0;
@@ -28,10 +39,3 @@ char  *ft_substr(char *s, unsigned int start, size_t len)
 	str[j] = 0;
 	return (str);
 }
-
-// }
-// int main()
-// {
-//     char t[] = "abcdefg";
-//     printf("%s",ft_substr(t,10,9));
-// }

@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlcpy.c                                          :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mboutuil <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mboutuil <mboutuil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 14:35:09 by mboutuil          #+#    #+#             */
-/*   Updated: 2022/10/13 14:41:51 by mboutuil         ###   ########.fr       */
+/*   Updated: 2022/11/07 13:45:53 by mboutuil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t		ft_strlcpy(char *dest, const char *src, size_t len)
+size_t	ft_strlcpy(char *dest, const char *src, size_t len)
 {
 	size_t	lsrc;
 	size_t	i;
@@ -31,10 +31,3 @@ size_t		ft_strlcpy(char *dest, const char *src, size_t len)
 	dest[i] = '\0';
 	return (lsrc);
 }
-
-// // int main()
-// {
-// 	char t[] = "hello";
-// 	char p[] = "world";
-// 	printf("%zu" , ft_strlcpy(t,p,4));
-// }

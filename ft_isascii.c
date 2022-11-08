@@ -1,25 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isascii.c                                          :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mboutuil <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mboutuil <mboutuil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 21:22:07 by mboutuil          #+#    #+#             */
-/*   Updated: 2022/10/07 21:33:38 by mboutuil         ###   ########.fr       */
+/*   Updated: 2022/11/07 13:08:23 by mboutuil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isascii(int c)
+#include "libft.h"
+
+int	ft_isascii(int c)
 {
 	if (0 <= c && 127 >= c)
-		return 1;
-	return 0;
+		return (1);
+	return (0);
 }
-// int main()
-// {
-// 	unsigned char i;
-// 	i = 129;
-// 	printf("%d" , ft_isascii(i));
-// 	//printf("%d",isascii(i));
-// }

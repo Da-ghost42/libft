@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*      ft_strmapi.c                                    :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mboutuil <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mboutuil <mboutuil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 03:10:28 by mboutuil          #+#    #+#             */
-/*   Updated: 2022/10/28 03:10:43 by mboutuil         ###   ########.fr       */
+/*   Updated: 2022/11/07 13:49:32 by mboutuil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-char* ft_strmapi(char const* s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t len;
-	size_t i;
-	char* str;
+	size_t	len;
+	size_t	i;
+	char	*str;
 
 	i = 0;
 	if (!s || !f)
 		return (0);
 	len = ft_strlen(s);
-	if (!(str = (char*)malloc(sizeof(char) * (len + 1))))
+	str = (char *)malloc(sizeof(char) * (len + 1));
+	if (!str)
 		return (0);
 	while (i < len)
 	{
@@ -32,17 +33,3 @@ char* ft_strmapi(char const* s, char (*f)(unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
-// char f(unsigned int i, char c)
-// {
-// 	char str;
-// 	str = c + 1;
-// 	return (str);
-// }
-
-// int main()
-// {
-// 	char str1[] = "abc";
-// 	char* str2;
-// 	str2 = ft_strmapi(str1, *f);
-// 	printf("%s\n", str2);
-// }
