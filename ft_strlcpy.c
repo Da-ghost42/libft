@@ -6,7 +6,7 @@
 /*   By: mboutuil <mboutuil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 14:35:09 by mboutuil          #+#    #+#             */
-/*   Updated: 2022/11/07 13:45:53 by mboutuil         ###   ########.fr       */
+/*   Updated: 2022/11/09 20:40:35 by mboutuil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t len)
 	size_t	lsrc;
 	size_t	i;
 
-	lsrc = 0;
-	while (src[lsrc] != '\0')
-		lsrc++;
+	lsrc = ft_strlen(src);
 	if (len == 0)
 		return (lsrc);
 	i = 0;

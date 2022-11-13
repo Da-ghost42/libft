@@ -6,7 +6,7 @@
 /*   By: mboutuil <mboutuil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 02:12:38 by mboutuil          #+#    #+#             */
-/*   Updated: 2022/11/07 13:30:33 by mboutuil         ###   ########.fr       */
+/*   Updated: 2022/11/09 22:01:11 by mboutuil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_putnbr_fd(int nb, int fd)
 	if (nb < 0)
 	{
 		ft_putchar_fd('-', fd);
-		nbr = (unsigned int)(nb * -1);
+		nbr = -nb;
 	}
 	else
 		nbr = (unsigned int)nb;

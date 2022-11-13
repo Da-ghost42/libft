@@ -6,7 +6,7 @@
 /*   By: mboutuil <mboutuil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 22:19:45 by mboutuil          #+#    #+#             */
-/*   Updated: 2022/11/08 21:47:20 by mboutuil         ###   ########.fr       */
+/*   Updated: 2022/11/09 00:41:13 by mboutuil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,13 +72,10 @@ char	**ft_split(char const *s, char c)
 		while (s[i] == c)
 			i++;
 		size = ft_size_word(s, c, i);
-		if (!(strs[j] = ft_substr((char *)s, i, size)))
-		{
-			ft_free(strs, j);
-			return (NULL);
-		}
+		strs[j] = ft_substr((char *)s, i, size);
+		if (strs == NULL)
+			return (ft_free(strs, j), NULL);
 		i += size;
 	}
-	strs[j] = 0;
-	return (strs);
+	return (strs[j] = 0, strs);
 }

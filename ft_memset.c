@@ -6,7 +6,7 @@
 /*   By: mboutuil <mboutuil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 00:58:52 by mboutuil          #+#    #+#             */
-/*   Updated: 2022/11/07 13:28:20 by mboutuil         ###   ########.fr       */
+/*   Updated: 2022/11/11 22:03:05 by mboutuil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	size_t			i;
-	unsigned char	*str;
+	size_t	i;
+	char	*str;
 
-	str = (unsigned char *)b;
+	str = (char *)b;
 	i = 0;
 	while (i < len)
 	{

@@ -6,7 +6,7 @@
 /*   By: mboutuil <mboutuil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 15:11:04 by mboutuil          #+#    #+#             */
-/*   Updated: 2022/11/07 15:18:52 by mboutuil         ###   ########.fr       */
+/*   Updated: 2022/11/11 20:23:46 by mboutuil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,12 @@
 # include<stdio.h>
 # include<string.h>
 # include<ctype.h>
-# include<stdlib.h>
 # include<unistd.h>
 # include<stdlib.h>
 # include <sys/types.h>
 # include <sys/stat.h>
 # include <fcntl.h>
 # include<string.h>
-# include<errno.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c );
@@ -52,7 +50,7 @@ int		ft_atoi(const char *str);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 size_t	ft_strlcpy(char *dest, const char *src, size_t len);
 void	*ft_memchr(const void *s, int c, size_t n);
-int		ft_memcmp(void const *s1, void const *s2, size_t const n);
+int		ft_memcmp(void const *s1, void const *s2, size_t n);
 char	**ft_split(char const *s, char c);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);

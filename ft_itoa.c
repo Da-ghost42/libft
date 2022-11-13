@@ -6,13 +6,13 @@
 /*   By: mboutuil <mboutuil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 02:22:52 by mboutuil          #+#    #+#             */
-/*   Updated: 2022/11/08 22:54:05 by mboutuil         ###   ########.fr       */
+/*   Updated: 2022/11/13 02:47:11 by mboutuil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-size_t	ft_nb_len(int nb)
+static size_t	ft_nb_len(int nb)
 {
 	int	len;
 
@@ -22,7 +22,7 @@ size_t	ft_nb_len(int nb)
 	while (nb)
 	{
 		len++;
-		nb = nb / 10;
+		nb /= 10;
 	}
 	return (len);
 }

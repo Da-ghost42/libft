@@ -6,7 +6,7 @@
 /*   By: mboutuil <mboutuil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 13:59:39 by mboutuil          #+#    #+#             */
-/*   Updated: 2022/11/07 14:00:40 by mboutuil         ###   ########.fr       */
+/*   Updated: 2022/11/09 21:10:15 by mboutuil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ char	*ft_substr(char *s, unsigned int start, size_t len)
 		return (NULL);
 	i = 0;
 	j = 0;
+	if (start >= ft_strlen(s))
+		str[i] = 0;
 	while (s[i])
 	{
 		if (i >= start && j < len)
@@ -36,6 +38,5 @@ char	*ft_substr(char *s, unsigned int start, size_t len)
 		}
 		i++;
 	}
-	str[j] = 0;
-	return (str);
+	return (str[j] = 0, str);
 }

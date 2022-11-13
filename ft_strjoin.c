@@ -6,7 +6,7 @@
 /*   By: mboutuil <mboutuil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 23:29:11 by mboutuil          #+#    #+#             */
-/*   Updated: 2022/11/08 22:02:16 by mboutuil         ###   ########.fr       */
+/*   Updated: 2022/11/08 22:59:41 by mboutuil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,11 +46,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		len_s2;
 
 	if (!s1 && !s2)
-		return NULL;
+		return (NULL);
 	if (!s1)
-		return (char *)s2;
+		return ((char *)s2);
 	if (!s2)
-		return (char *)s1;
+		return ((char *)s1);
 	len_s1 = ft_strlen(s1);
 	len_s2 = ft_strlen(s2);
 	p = (char *)malloc(len_s1 + len_s2 + 1);

@@ -6,7 +6,7 @@
 /*   By: mboutuil <mboutuil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 11:36:48 by mboutuil          #+#    #+#             */
-/*   Updated: 2022/11/07 16:01:46 by mboutuil         ###   ########.fr       */
+/*   Updated: 2022/11/13 02:42:25 by mboutuil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,11 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	i;
+	int	n;
 
-	i = ft_strlen(s);
-	while (s[i] != (char)c && i >= 0)
-		i--;
-	if (i < 0)
-		return (NULL);
-	else
-		return ((char *)s + i);
+	n = ft_strlen(s) + 1;
+	while (--n >= 0)
+		if (s[n] == (char)c)
+			return ((char *)(s + n));
+	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: mboutuil <mboutuil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 20:03:06 by mboutuil          #+#    #+#             */
-/*   Updated: 2022/11/07 13:07:00 by mboutuil         ###   ########.fr       */
+/*   Updated: 2022/11/11 22:39:17 by mboutuil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,5 @@
 
 int	ft_isalnum(int c)
 {
-	if (('0' <= c && '9' >= c) || ('a' <= c && 'z' >= c)
-		|| ('A' <= c && 'Z' >= c))
-		return (1);
-	return (0);
+	return (ft_isalpha(c) || ft_isdigit(c));
 }

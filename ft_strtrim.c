@@ -6,7 +6,7 @@
 /*   By: mboutuil <mboutuil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 01:45:40 by mboutuil          #+#    #+#             */
-/*   Updated: 2022/11/07 13:59:13 by mboutuil         ###   ########.fr       */
+/*   Updated: 2022/11/11 22:50:03 by mboutuil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ char	*ft_strtrim(const char *s1, const char *set)
 	while (s1[++start])
 		if (!ft_strchr(set, s1[start]))
 			break ;
-	end = ft_strlen(s1) + 1;
-	while (--end)
-		if (!ft_strchr(set, s1[end - 1]))
+	end = ft_strlen(s1);
+	while (end--)
+		if (!ft_strchr(set, s1[end]))
 			break ;
-	return (ft_substr((char *)s1, start, (end - start)));
+	return (ft_substr((char *)s1, start, (1 + end - start)));
 }
